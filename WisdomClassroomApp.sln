@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1022
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WisdomClassroomApp", "WisdomClassroomApp\WisdomClassroomApp.csproj", "{BA714FD3-669D-4471-A1D2-383C22683A45}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA714FD3-669D-4471-A1D2-383C22683A45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA714FD3-669D-4471-A1D2-383C22683A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA714FD3-669D-4471-A1D2-383C22683A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA714FD3-669D-4471-A1D2-383C22683A45}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {879CFD36-1A82-4C41-B9BE-68D2B37C2EB3}
+	EndGlobalSection
+EndGlobal
