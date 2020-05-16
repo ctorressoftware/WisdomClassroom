@@ -1,10 +1,4 @@
-﻿//PARECE QUE SI TIENE EL ATRIBUTO FOREIGN KEY ESPECIFICADO, SE HACE ASI:
-// Ver cuadro #7:
-// https://docs.microsoft.com/es-es/ef/core/modeling/relationships?tabs=fluent-api%2Cfluent-api-simple-key%2Csimple-key
-
-// Nota: REVISAR TODAS LAS RELACIONES
-
-using Microsoft.AspNet.Identity.EntityFramework;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
 using WisdomClassroomApp.Models.Domain;
 using WisdomClassroomApp.Models.Identity;
@@ -45,6 +39,30 @@ namespace WisdomClassroomApp.Persistence
             modelBuilder.Entity<ApplicationUser>().ToTable("User");
             #endregion
 
+            #region TypeActivity
+
+            modelBuilder.Entity<TypeActivity>().ToTable("TypeActivity");
+
+            modelBuilder.Entity<TypeActivity>().HasKey(x => x.Id);
+
+            modelBuilder.Entity<TypeActivity>().Property(x => x.Description)
+                        .HasColumnType("varchar")
+                        .HasMaxLength(100)
+                        .IsRequired();
+            #endregion
+
+            #region Category
+
+            modelBuilder.Entity<Category>().ToTable("Category");
+
+            modelBuilder.Entity<Category>().HasKey(x => x.Id);
+
+            modelBuilder.Entity<Category>().Property(x => x.Description)
+                        .HasColumnType("varchar")
+                        .HasMaxLength(100)
+                        .IsRequired();
+            #endregion
+
             #region Person
 
             modelBuilder.Entity<Person>().ToTable("Person");
@@ -72,30 +90,6 @@ namespace WisdomClassroomApp.Persistence
             modelBuilder.Entity<Person>().Property(x => x.Role)
                         .HasColumnType("varchar")
                         .HasMaxLength(10)
-                        .IsRequired();
-            #endregion
-
-            #region Category
-
-            modelBuilder.Entity<Category>().ToTable("Category");
-
-            modelBuilder.Entity<Category>().HasKey(x => x.Id);
-
-            modelBuilder.Entity<Category>().Property(x => x.Description)
-                        .HasColumnType("varchar")
-                        .HasMaxLength(100)
-                        .IsRequired();
-            #endregion
-
-            #region TypeActivity
-
-            modelBuilder.Entity<TypeActivity>().ToTable("TypeActivity");
-
-            modelBuilder.Entity<TypeActivity>().HasKey(x => x.Id);
-
-            modelBuilder.Entity<TypeActivity>().Property(x => x.Description)
-                        .HasColumnType("varchar")
-                        .HasMaxLength(100)
                         .IsRequired();
             #endregion
 
